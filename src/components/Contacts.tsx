@@ -1,8 +1,9 @@
 import React from 'react';
+import SectionHeader from './SectionHeader';
 
 const Contacts = () => (
   <section>
-    <h2 className="text-xl font-semibold">Contacts</h2>
+    <SectionHeader text={'Contacts'} />
     <p>Email: bveretelnik@gmail.com</p>
     <p>Phone: +49 160 95847273</p>
     <p>
