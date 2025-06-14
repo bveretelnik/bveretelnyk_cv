@@ -1,15 +1,19 @@
 import React from 'react';
+import { skills } from '../mock';
+import SectionHeader from '@components/SectionHeader';
+import { setFirstLetterUppercase } from '../helpers/setFirstLetterUppercase';
+import CustomSpanBold from '@components/CustomSpanBold';
 
-const Skills = props => (
+const Skills = () => (
   <section className="mb-6">
-    <h2 className="text-xl font-semibold">Skills</h2>
-    <ul className="list-disc list-inside">
-      <li>
-        <span className="font-bold">Languages:</span> JavaScript, TypeScript
-      </li>
-      <li>Frontend: React, Redux, Next.js, React Native, Styled Components</li>
-      <li>Backend: Node.js, Express</li>
-      <li>Tools: Git, REST APIs, Agile/Scrum</li>
+    <SectionHeader text="Skills" />
+    <ul className="list-inside">
+      {Object.keys(skills).map(item => (
+        <li>
+          <CustomSpanBold value={setFirstLetterUppercase(item)} />{' '}
+          {skills[item]?.join(', ')}
+        </li>
+      ))}
     </ul>
   </section>
 );
