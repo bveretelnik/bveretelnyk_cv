@@ -5,7 +5,7 @@ type SectionHeaderProps = {
 };
 
 const SectionHeader: FC<SectionHeaderProps> = ({ text }) => (
-  <h2 className="text-2xl font-semibold">{text}</h2>
+  <h2 className="text-2xl font-semibold mb-4">{text}</h2>
 );
 
 export default SectionHeader;

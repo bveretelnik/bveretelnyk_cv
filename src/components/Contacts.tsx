@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { FC } from 'react';
 import SectionHeader from './SectionHeader';
 import BaseLink from '@components/BaseLink';
 import { contacts } from '../mock';
 import { setFirstLetterUppercase } from '../helpers/setFirstLetterUppercase';
 import CustomSpanBold from '@components/CustomSpanBold';
 
-const Contacts = () => (
-  <section>
+const Contacts: FC = () => (
+  <section className="mb-6">
     <SectionHeader text="Contacts" />
     {Object.keys(contacts).map(contact => (
       <p>
-        <CustomSpanBold value={setFirstLetterUppercase(contact)} />:{' '}
+        <CustomSpanBold value={setFirstLetterUppercase(contact)} />{' '}
         {contacts[contact]}
       </p>
     ))}

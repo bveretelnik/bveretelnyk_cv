@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
+import SectionHeader from '@components/SectionHeader';
+import { education } from '../mock';
 
-const Education = props => (
+const Education: FC = () => (
   <section className="mb-6">
-    <h2 className="text-xl font-semibold">Education</h2>
-    <p>Master’s Degree in Finance, NULES of Ukraine (2011 – 2016)</p>
+    <SectionHeader text="Education" />
+    <p>{education}</p>
   </section>
 );
 

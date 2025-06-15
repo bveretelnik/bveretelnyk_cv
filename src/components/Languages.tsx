@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { FC } from 'react';
+import SectionHeader from '@components/SectionHeader';
+import { languages } from '../mock';
+import { setFirstLetterUppercase } from '../helpers/setFirstLetterUppercase';
+import CustomSpanBold from '@components/CustomSpanBold';
 
-const Languages = () => (
+const Languages: FC = () => (
   <section className="mb-6">
+    <SectionHeader text="Languages" />
     <ul className="list-inside list-none">
-      <h2 className="text-xl font-semibold mb-2">Languages</h2>
-      <li>
-        <span className="font-bold">Ukrainian:</span> Native
-      </li>
-      <li>
-        <span className="font-bold">English:</span> B2
-      </li>
-      <li>
-        <span className="font-bold">German:</span> A1
-      </li>
+      {Object.keys(languages).map(language => (
+        <li>
+          <CustomSpanBold value={setFirstLetterUppercase(language)} />{' '}
+          {languages[language]}
+        </li>
+      ))}
     </ul>
   </section>
 );

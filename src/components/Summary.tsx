@@ -1,14 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
+import SectionHeader from '@components/SectionHeader';
+import { summary } from '../mock';
 
-const Summary = props => (
+const Summary: FC = () => (
   <section className="mb-6">
-    <h2 className="text-xl font-semibold">Summary</h2>
-    <p>
-      Senior Frontend Engineer with 4+ years of experience designing and
-      implementing scalable web applications using React, TypeScript, and
-      Next.js. Strong in architecture planning, UI/UX collaboration, and
-      performance optimization.
-    </p>
+    <SectionHeader text="Summary" />
+    <p>{summary}</p>
   </section>
 );
 

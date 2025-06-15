@@ -18,12 +18,12 @@ const Resume = () => {
         <DownloadCv />
         <ContentContainer>
           <Header />
+          <Contacts />
           <Summary />
           <Skills />
+          <Languages />
           <Experience />
           <Education />
-          <Languages />
-          <Contacts />
         </ContentContainer>
       </div>
     </div>
